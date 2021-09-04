@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllBooks_Activity">
+    tools:context=".CurrentlyReadingBooksActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:id="@+id/booksRecyclerView"
-        android:padding="10dp"/>
+        android:layout_margin="10dp"
+        android:id="@+id/currReading_RecView"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,50 +22,10 @@ public class AllBooks_Activity extends AppCompatActivity {
         booksRecyclerView = findViewById(R.id.booksRecyclerView);
 
         booksRecyclerView.setAdapter(adapter);
-        booksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        booksRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
-        ArrayList<Book> books = new ArrayList<>();
-        books.add(new Book(1,
-                "1Q84",
-                "dANI LOU",
-                130,
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIju3DElwC8G9wX_5OXhQjUA9SlRlZjyjJ1Q&usqp=CAU.jpn",
-                "A work of madening brilliance",
-                "Long description",
-                LocalDate.of(2000,12,30)));
-        books.add(new Book(2,
-                "1Q84",
-                "dANI LOU",
-                130,
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIju3DElwC8G9wX_5OXhQjUA9SlRlZjyjJ1Q&usqp=CAU.jpn",
-                "A work of madening brilliance",
-                "Long description",
-                LocalDate.of(2000,12,30)));
-        books.add(new Book(3,
-                "1Q84",
-                "dANI LOU",
-                130,
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIju3DElwC8G9wX_5OXhQjUA9SlRlZjyjJ1Q&usqp=CAU.jpn",
-                "A work of madening brilliance",
-                "Long description",
-                LocalDate.of(2000,12,30)));
-        books.add(new Book(4,
-                "1Q84",
-                "dANI LOU",
-                130,
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIju3DElwC8G9wX_5OXhQjUA9SlRlZjyjJ1Q&usqp=CAU.jpn",
-                "A work of madening brilliance",
-                "Long description",
-                LocalDate.of(2000,12,30)));
-        books.add(new Book(5,
-                "1Q84",
-                "dANI LOU",
-                130,
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIju3DElwC8G9wX_5OXhQjUA9SlRlZjyjJ1Q&usqp=CAU.jpn",
-                "A work of madening brilliance",
-                "Long description",
-                LocalDate.of(2000,12,30)));
 
-        adapter.setBooks(books);
+
+        adapter.setBooks(DataManager.getInstance().getAllBooks());
     }
 }

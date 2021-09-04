@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imgLogo;
-    private Button btnAllBooks, btnCurrentlyReading,  btnAlreadyRead,  btnWishList,  btnSeeFavorites;
+    private Button btnAllBooks, btnCurrentlyReading,  btnAlreadyRead, btnWantRead,  btnSeeFavorites;
     private TextView txtName, txtLicense;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         initializeViews();
 
+        //Create database
         btnAllBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,7 +28,42 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnAlreadyRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Navigate the user to activity_already_read_book
 
+                Intent intent = new Intent(MainActivity.this,AlreadyReadBookActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnWantRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,WantToReadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSeeFavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FavoriteBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnCurrentlyReading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,CurrentlyReadingBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        DataManager.getInstance(); // By doing this, we are prevented a potential bug to happen (in case there a re not items in alreadyReadBooks ArrayList or the other ones)
     }
 
     private void initializeViews(){
@@ -37,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         btnAllBooks = findViewById(R.id.btnAllBooks);
         btnCurrentlyReading = findViewById(R.id.btnCurrentlyReading);
         btnAlreadyRead = findViewById(R.id.btnAlreadyRead);
-        btnWishList = findViewById(R.id.btnWishList);
-        btnSeeFavorites = findViewById(R.id.btnWishList);
+        btnWantRead = findViewById(R.id.btnWanTotRead);
+        btnSeeFavorites = findViewById(R.id.btnFavorites);
 
         txtName = findViewById(R.id.txtName);
         txtLicense = findViewById(R.id.txtLicense);

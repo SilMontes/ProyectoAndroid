@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.silmontes.proyectoandroid">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoAndroid">
+        <activity
+            android:name=".CurrentlyReadingBooksActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FavoriteBooksActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WantToReadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AlreadyReadBookActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BookActivity"
+            android:exported="true" />
         <activity
             android:name=".AllBooks_Activity"
             android:exported="true" />

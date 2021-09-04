@@ -1,6 +1,9 @@
 package com.silmontes.proyectoandroid;
 
+import static com.silmontes.proyectoandroid.BookActivity.BOOK_ID_KEY;
+
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -52,7 +55,9 @@ public class BooksRecyclerAdapter extends  RecyclerView.Adapter<BooksRecyclerAda
         holder.parentMaterialCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, books.get(adapterPosition).getBookName()+" Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext,BookActivity.class); //Destination: BookActivity.class (Navigates the user to the BookActivity
+                intent.putExtra(BOOK_ID_KEY,books.get(adapterPosition).getId()); //Passing data; in this case the book id  .putExtra() receives key-value pairs as parameters
+                mContext.startActivity(intent);
             }
         });
     }

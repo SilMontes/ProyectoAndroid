@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">ProyectoAndroid</string>
     <string name="book_name">Book Name</string>
+    <string name="inf_book_name">Book Name:</string>
+    <string name="inf_author">Author:</string>
+    <string name="inf_pages">Pages:</string>
+    <string name="inf_textview">TextView</string>
+    <string name="inf_description">Description:</string>
+    <string name="inf_more_details">More Details:</string>
+    <string name="inf_release_data">Release Data:</string>
 </resources>
