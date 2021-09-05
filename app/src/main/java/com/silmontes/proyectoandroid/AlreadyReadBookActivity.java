@@ -1,6 +1,7 @@
 package com.silmontes.proyectoandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,7 +20,7 @@ public class AlreadyReadBookActivity extends AppCompatActivity {
         //We can use the adapter created as many times as needed
         BooksRecyclerAdapter adapter =new BooksRecyclerAdapter(this);
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         adapter.setBooks(DataManager.getAlreadyReadBooks());
 
     }

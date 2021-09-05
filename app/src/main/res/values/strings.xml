@@ -8,4 +8,9 @@
     <string name="inf_description">Description:</string>
     <string name="inf_more_details">More Details:</string>
     <string name="inf_release_data">Release Data:</string>
+    <string name="add_to_favorite_heart_btn">Add To Favorite</string>
+    <string name="share_book_btn">Share book</string>
+    <string name="send_as_email_btnTb">Send As Email</string>
+    <string name="send_as_message_btnTb">Send As Message</string>
+    <string name="sens_as_whatsapp">Sens as WhatsApp</string>
 </resources>

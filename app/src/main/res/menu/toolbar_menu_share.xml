@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/heartFavBook"
+        android:icon="@drawable/ic_favorite_border"
+        android:title="@string/add_to_favorite_heart_btn"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/shareIc"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom"
+        android:title="@string/share_book_btn">
+
+        <menu>
+            <item android:id="@+id/send_em_ic"
+                android:icon="@drawable/ic_email"
+                android:title="@string/send_as_email_btnTb"
+                app:showAsAction="never"/>
+            <item android:id="@+id/send_whatsapp_ic"
+                android:title="@string/sens_as_whatsapp"
+                android:icon="@drawable/ic_whatsapp"
+                app:showAsAction="never"/>
+            <item android:id="@+id/send_ms_ic"
+                android:icon="@drawable/ic_message"
+                android:title="@string/send_as_message_btnTb"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+
+
+</menu>
